@@ -17,8 +17,14 @@
         <th> Team </th>
         <th> Points </th>
         </table>
-
-        <button type="button" class="btn btn-success" id="match">Add a Match</button>
+        <form id='add-match'>
+          Home Team <input type='text' name='home-team' id="home-team"/>
+          Away Team <input type='text' name='away-team' id="away-team"/>
+          Outcome [A : Home Win, B : Away Win, D : Draw]<input type='text' name='outcome' id="outcome"/>
+          <br>
+          <br>
+          <input type='submit' value='Add a Match' id="match" class="btn btn-success">
+        </form>
       </div>
     </div>
     <script src='src/Pulseball.js'></script>
