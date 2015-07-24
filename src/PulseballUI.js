@@ -3,5 +3,5 @@ var exampleRankingsTable = [{ "team": { "name": "Australia", "id": 32 }, "pos": 
 
 $(document).ready( function(){
     PULSEBALL.init(exampleRankingsTable)
+    console.log(PULSEBALL.rankingsTable)
   });
-});

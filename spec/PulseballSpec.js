@@ -89,5 +89,16 @@ describe ("PULSEBALL", function() {
          PULSEBALL.addMatch(noResultMatch)
          expect(PULSEBALL.rankingsTable).toEqual(exampleRankingsTable)
       })
+
+      it("can process multiple match results", function() {
+        PULSEBALL.init(exampleRankingsTable)
+        PULSEBALL.addMatch(exampleHomeMatchWin)
+        PULSEBALL.addMatch(exampleAwayMatchWin)
+        PULSEBALL.addMatch(exampleDraw)
+        expect(PULSEBALL.rankingsTable[2]["team"]["name"]).toEqual("England")
+        expect(PULSEBALL.rankingsTable[2].pts).toEqual(53.36)
+        expect(PULSEBALL.rankingsTable[3]["team"]["name"]).toEqual("France")
+        expect(PULSEBALL.rankingsTable[3].pts).toEqual(52.29)
+      })
 })
 
