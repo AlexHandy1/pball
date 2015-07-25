@@ -17,7 +17,7 @@ Summary
 
 * More detail on areas where I would extend the application can be found listed below in 'Further improvements'
 
-[!PULSEBALL](https://github.com/AlexHandy1/pball/blob/master/Pulseball.png)
+![PULSEBALL](https://github.com/AlexHandy1/pball/blob/master/Pulseball.png)
 
 Use Cases:
 -------
@@ -62,11 +62,11 @@ Further Improvements
 
 *  User input validations - develop specified drop-downs/ input paramaters in form fields containing only valid input for system. Enable users to add scores.
 
-*  Feature testing - implement feature tests for UI elements
+*  Feature testing - implement feature tests for UI elements.
 
-*  Adapt system to deal with non-completed matches - e.g. develop separate rankings table view for live matches vs completed matches
+*  Adapt system to deal with non-completed matches - e.g. develop separate rankings table view for live matches vs completed matches.
 
-* Implement a front-end JS framework e.g. Angular to enable development of more advanced feature set e.g. toggle between live and completed match views
+* Implement a front-end JS framework e.g. Angular to enable development of more advanced feature set - toggle between live and completed match rankings table views.
 
-* Allow further dynamic updating of underlying JSON rankings table e.g. update position property, enable new teams to be added
+* Allow further dynamic updating of underlying JSON rankings table e.g. update position property, enable new teams to be added.
 
