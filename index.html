@@ -2,28 +2,38 @@
 
   <head>
     <link href='css/bootstrap.css' rel='stylesheet'>
-    <link href='css/bootstrap-responsive.css' rel='stylesheet'>
-    <link href='css/style.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
 
  <body>
     <div class ='container' id ='top'>
       <div class='jumbotron'>
-
+        <h1 class="text-center pulseball"><i> PULSEBALL!</i></h1>
         <h3>Current Rankings</h3>
 
         <table id='rankings'class="table table-condensed">
         <th> Team </th>
         <th> Points </th>
         </table>
-        <form id='add-match'>
-          Home Team <input type='text' name='home-team' id="home-team"/>
-          Away Team <input type='text' name='away-team' id="away-team"/>
-          Outcome [A : Home Win, B : Away Win, D : Draw]<input type='text' name='outcome' id="outcome"/>
-          <br>
-          <br>
-          <input type='submit' value='Add a Match' id="match" class="btn btn-success">
+
+        <form class="form-horizontal" id="add-match">
+          <div class="form-group">
+            <label for="exampleInputName2">Home Team</label>
+            <input type="text" name='home-team' class="form-control" id="home-team" placeholder="Enter Home Team">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName2">Away Team</label>
+            <input type="text" name='away-team' class="form-control" id="away-team" placeholder="Enter Away Team">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName2">Home City Host</label>
+            <input type="text" name='city' class="form-control" id="city" placeholder="Enter City Where Match Played">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputName2">Outcome</label>
+            <input type="text" name='outcome' class="form-control" id="outcome" placeholder="A = Home Win  B = Away Win  D = Draw">
+          </div>
+           <button type="submit" class="btn btn-success" id="match">Add Match</button>
         </form>
       </div>
     </div>

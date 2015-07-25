@@ -41,8 +41,13 @@ describe ("PULSEBALL", function() {
       expect(PULSEBALL.findRankingsTablePosition(PULSEBALL.rankingsTable, "team", "name", "England")).toEqual(3)
     })
 
-      it("can add an away match win and update the rankings table pts rounded to 2 decimal places", function() {
+    describe("adding matches", function() {
+
+      beforeEach( function() {
         PULSEBALL.init(exampleRankingsTable)
+      });
+
+      it("can add an away match win and update the rankings table pts rounded to 2 decimal places", function() {
         PULSEBALL.addMatch(exampleAwayMatchWin)
         expect(PULSEBALL.rankingsTable[2]["team"]["name"]).toEqual("England")
         expect(PULSEBALL.rankingsTable[2].pts).toEqual(53.68)
@@ -51,7 +56,6 @@ describe ("PULSEBALL", function() {
         })
 
       it("can add a home match win and update the rankings table pts rounded to 2 decimal places", function() {
-        PULSEBALL.init(exampleRankingsTable)
         PULSEBALL.addMatch(exampleHomeMatchWin)
         expect(PULSEBALL.rankingsTable[2]["team"]["name"]).toEqual("France")
         expect(PULSEBALL.rankingsTable[2].pts).toEqual(53.59)
@@ -60,7 +64,6 @@ describe ("PULSEBALL", function() {
       })
 
       it("can add a draw and update the rankings table pts rounded to 2 decimal places", function() {
-        PULSEBALL.init(exampleRankingsTable)
         PULSEBALL.addMatch(exampleDraw)
         expect(PULSEBALL.rankingsTable[2]["team"]["name"]).toEqual("France")
         expect(PULSEBALL.rankingsTable[2].pts).toEqual(53.31)
@@ -69,13 +72,11 @@ describe ("PULSEBALL", function() {
         })
 
       it("can add a match where ratings point difference is greater than 10", function() {
-        PULSEBALL.init(exampleRankingsTable)
         PULSEBALL.addMatch(examplePlusTenDiffHomeMatchWin)
         expect(PULSEBALL.rankingsTable).toEqual(exampleRankingsTable)
       })
 
       it ("can add a match where ratings point difference is greater than -10", function() {
-        PULSEBALL.init(exampleRankingsTable)
         PULSEBALL.addMatch(examplePlusTenDiffAwayMatchWin)
         expect(PULSEBALL.rankingsTable[0]["team"]["name"]).toEqual("New Zealand")
          expect(PULSEBALL.rankingsTable[3]["team"]["name"]).toEqual("Australia")
@@ -85,13 +86,11 @@ describe ("PULSEBALL", function() {
       })
 
       it ("makes no changes to table if there is No Result completed in match", function() {
-         PULSEBALL.init(exampleRankingsTable)
          PULSEBALL.addMatch(noResultMatch)
          expect(PULSEBALL.rankingsTable).toEqual(exampleRankingsTable)
       })
 
       it("can process multiple match results", function() {
-        PULSEBALL.init(exampleRankingsTable)
         PULSEBALL.addMatch(exampleHomeMatchWin)
         PULSEBALL.addMatch(exampleAwayMatchWin)
         PULSEBALL.addMatch(exampleDraw)
@@ -100,5 +99,6 @@ describe ("PULSEBALL", function() {
         expect(PULSEBALL.rankingsTable[3]["team"]["name"]).toEqual("France")
         expect(PULSEBALL.rankingsTable[3].pts).toEqual(52.29)
       })
+    });
 })
 
