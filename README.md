@@ -11,9 +11,9 @@ Summary
 
   * I used Jasmine to develop a robust suite of unit tests for the underlying system.  With the primary focus on the system logic, the limited scope of the UI and the lack of a framework specific browser testing technology (e.g. Protractor) I decided not to implement feature tests.
 
-  * For the purposes of exercise, I assumed user knowledge of system and did not build in error validations into UI.  Additionally, assumed all match inputs were completed (Status : "C") as no use case detailed for how system should handle upcoming or live matches
+  * For the purposes of the exercise, I assumed user knowledge of the system and did not build in error validations into UI.  Additionally, I assumed all match inputs were completed (e.g. Status : "C") as no use case was detailed in specification for how system should handle upcoming or live matches.
 
-  * Followed specific output of spec by not dynamically updating 'pos' property in rankings table JSON. I did, however, ensure my UI always clearly displayed the teams in order based on latest ranking points.
+  * Followed specific output of specification by not dynamically updating 'pos' property in rankings table JSON. I did, however, ensure my UI always clearly displayed the teams in order based on latest ranking points.
 
 * More detail on areas where I would extend the application can be found listed below in 'Further improvements'
 
